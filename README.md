@@ -16,7 +16,7 @@ Raw images live in `dataset/train/images/`. Corresponding labels are in `dataset
 ## Project Structure
 
 ```
-assignment/
+wood-defect-analysis/
 ├── dataset/
 │   ├── data.yaml                  # YOLO dataset config
 │   ├── train/

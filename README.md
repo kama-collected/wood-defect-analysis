@@ -13,6 +13,8 @@ Image pre-processing pipeline for a YOLO-format wood defect dataset. The pipelin
 
 Raw images live in `dataset/train/images/`. Corresponding labels are in `dataset/train/labels/`. Processed outputs are written to `dataset/train/preprocessed/`.
 
+To change the sample image, replace the value for SAMPLE_IDX in Cell 5
+
 ## Project Structure
 
 ```

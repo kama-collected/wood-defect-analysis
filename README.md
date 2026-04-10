@@ -18,7 +18,7 @@ To change the sample image, replace the value for SAMPLE_IDX in Cell 5
 ## Project Structure
 
 ```
-assignment/
+wood-defect-analysis/
 ├── dataset/
 │   ├── data.yaml                  # YOLO dataset config
 │   ├── train/

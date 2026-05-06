@@ -1,0 +1,6 @@
+Observation template:
+- Proposed optimizers converge faster in early epochs.
+- Adaptive mechanisms stabilize late-stage training.
+- Reduced oscillations compared to Adam and RMSProp.
+- Some optimizers provide better accuracy at moderate cost increase.
+- Others maintain competitive performance with lower training time.

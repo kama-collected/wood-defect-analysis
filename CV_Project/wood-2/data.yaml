@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 11
+names: ['Crack', 'Dead_Knot', 'Healthy', 'Knot_missing', 'Knot_missing ', 'Knot_with_crack', 'Live_Knot', 'Marrow', 'Nail_hole', 'Quartzity', 'Resin']
+
+roboflow:
+  workspace: school-mys25
+  project: wood-7ao2p
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/school-mys25/wood-7ao2p/dataset/1

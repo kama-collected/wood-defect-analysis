@@ -1,0 +1,107 @@
+{
+  "model_name": "yolo26n.pt",
+  "dataset_path": "../wood-2/data.yaml",
+  "project_dir": "runs/consensusdrift_adam_vs_benchmarks",
+  "config": {
+    "epochs": 30,
+    "imgsz": 416,
+    "batch": 32,
+    "device": 0,
+    "workers": 0,
+    "patience": 20,
+    "seed": [
+      0,
+      1,
+      2
+    ],
+    "deterministic": true,
+    "verbose": true,
+    "exist_ok": true
+  },
+  "benchmark_optimizers_to_run": [
+    "Adam",
+    "Adamax",
+    "AdamW",
+    "NAdam"
+  ],
+  "custom_optimizers_to_run": [
+    "consensusdrift_adam"
+  ],
+  "optimizer_configs": {
+    "Adam": {
+      "optimizer": "Adam",
+      "lr0": 0.001,
+      "lrf": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0005
+    },
+    "Adamax": {
+      "optimizer": "Adamax",
+      "lr0": 0.002,
+      "lrf": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0005
+    },
+    "AdamW": {
+      "optimizer": "AdamW",
+      "lr0": 0.001,
+      "lrf": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.001
+    },
+    "NAdam": {
+      "optimizer": "NAdam",
+      "lr0": 0.001,
+      "lrf": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0005
+    },
+    "texadam_trust": {
+      "optimizer": "texadam_trust",
+      "lr0": 0.001,
+      "lrf": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "texture_gamma": 0.5,
+      "trust_clip": [
+        0.1,
+        10.0
+      ],
+      "agc_clip": 0.01
+    },
+    "consensusdrift_adam": {
+      "optimizer": "consensusdrift_adam",
+      "lr0": 0.001,
+      "lrf": 0.01,
+      "momentum": 0.9,
+      "weight_decay": 0.0001,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "rho": 0.05,
+      "consensus_beta": 0.9,
+      "drift_eps": 1e-08
+    }
+  },
+  "task": "detect",
+  "metrics": [
+    "mAP50",
+    "mAP50-95",
+    "Precision",
+    "Recall",
+    "Mask mAP",
+    "IoU",
+    "Training time per epoch",
+    "Total training time",
+    "Inference speed (FPS)",
+    "Time (s)"
+  ],
+  "reporting": "mean ± standard deviation across seeds"
+}

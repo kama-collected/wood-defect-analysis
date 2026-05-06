@@ -1,0 +1,20 @@
+################################Jupyter
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="GUf**************K9a")
+project = rf.workspace("darren-n9avh").project("wood")
+dataset = project.version(1).download("yolo26")
+################################ terminal
+curl -L "https://app.roboflow.com/ds/yx7ZPRA8Tq?key=bZ1t2vzwAK" > roboflow.zip; unzip roboflow.zip; rm roboflow.zip
+################################raw Url
+https://app.roboflow.com/ds/yx7ZPRA8Tq?key=bZ1t2vzwAK
+
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="GUfFf1O7SPcClfrFzK9a")
+project = rf.workspace("darren-n9avh").project("wood-7ao2p-9ivge")
+version = project.version(1)
+dataset = version.download("yolo26")
+                

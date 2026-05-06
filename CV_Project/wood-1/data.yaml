@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 10
+names: ['0', 'Crack', 'Dead_Knot', 'Healthy', 'Knot_missing', 'Knot_with_crack', 'Live_Knot', 'Marrow', 'Quartzity', 'Resin']
+
+roboflow:
+  workspace: darren-n9avh
+  project: wood-7ao2p-9ivge
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/darren-n9avh/wood-7ao2p-9ivge/dataset/1
